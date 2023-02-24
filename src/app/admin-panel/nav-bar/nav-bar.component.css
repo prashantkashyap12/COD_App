@@ -1,0 +1,35 @@
+.offcanvas {
+  width: 220px;
+}
+.btn-style {
+  font-size: 24px;
+}
+.btn-style:hover {
+  color: rgb(61, 60, 60);
+}
+.navbar-nav {
+  width: 98%;
+}
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  margin: 5px 0px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.nav-item:hover,
+.nav-item a:hover {
+  color: rgb(215, 27, 27);
+}
+.nav-item i {
+  display: flex;
+  align-items: center;
+}
+.icon-value {
+  margin-left: auto;
+}

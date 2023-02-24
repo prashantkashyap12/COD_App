@@ -1,0 +1,27 @@
+.top-header{
+    height: 170px;
+    
+    background: linear-gradient(rgba(246, 14, 14, 0.5),rgba(0,0,0,0.5)), url('../../../assets/emil-subs.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.main-form{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-top: -25px;
+    height:50vh;
+}
+.classmActive{
+    margin-left: 250px;
+
+}
+.classmFalse{
+    width: 250px;
+}
+input [type=text]{
+    border-bottom: 2px solid red;
+}
+.form-btn{
+    border-radius: 40px;
+}

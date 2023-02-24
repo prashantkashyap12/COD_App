@@ -1,0 +1,120 @@
+<!-- Top Header  -- open -->
+<div class="container">
+  <div class="row p-3 bg-white border-bottom border-danger">
+    <div class="col-3 text-start">
+      <a
+        class="btn btn-danger"
+        data-bs-toggle="offcanvas"
+        href="#offcanvasExample"
+        role="button"
+        aria-controls="offcanvasExample"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="col-6 text-decoration-underline">
+      <p class="h2 text-center fw-bold display-5">
+        C<span class="text-danger"
+          ><i class="fa fa-bullseye" aria-hidden="true"></i></span
+        >D
+      </p>
+    </div>
+    <div class="col-3 text-end">
+      <button type="button" class="btn btn-danger position-relative">
+        <i class="fa fa-bell-o" aria-hidden="true"></i>
+        <span
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+        >
+          99+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Top Header -- close -->
+
+<!-- off canvas -- open -->
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <div class="offcanvas-header bg-light border-bottom border-danger">
+    <img
+      src="../../../assets/logo_main.png"
+      style="height: 65px; align-items: center"
+      alt=""
+    />
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/user-profile">&nbsp; My Profile</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-linode" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/mygame">&nbsp; My Game</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/commission">&nbsp; Commission</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-braille" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/howtoplay">&nbsp; How to Play</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-money" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/mywallet">&nbsp; My Wallet</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/help">&nbsp; Help</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/Share_earn">&nbsp; Share & Earn</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <a class="nav-link" routerLink="/myterms">&nbsp; Terms & Condition</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+        <li class="nav-item">
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          <a class="nav-link" (click)="signOut()">&nbsp; Sign out</a>
+          <i class="fa fa-angle-right icon-value" aria-hidden="true"></i>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="offcanvas-footer">
+    <div class="container">
+      <div class="row bg-light p-3 border-top border-dark">
+        <div class="col-4 align-items-center">A</div>
+        <div class="col-4 align-items-center">B</div>
+        <div class="col-4 align-items-center">C</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- off canvas -- close -->
+
+<!-- router-view open -->

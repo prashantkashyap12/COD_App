@@ -1,0 +1,188 @@
+<div class="p-3 bg-light">
+  <h3 class="fw-bold fs-3">My Wallet</h3>
+</div>
+
+<div class="bg-white m-2" style="height: 100%">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 p-4 bg-light text-center justify-content-center">
+        <span class="fs-5 fw-bold"
+          ><i class="fa fa-user-circle text-danger" aria-hidden="true"></i>
+          {{ username }}</span
+        >
+        <h1 class="fw-bold">{{ walletAmount }}/-</h1>
+        <span class="text-secondary">Wellt Balence</span>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles">
+          <button
+            type="button"
+            class="btn btn-outline-success"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            (click)="addmoney()"
+            value="add"
+          >
+            + Add Money
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal2"
+            (click)="addmoney()"
+            value="sub"
+          >
+            - Withdraw
+          </button>
+        </div>
+
+        <marquee class="pt-3 text-danger" behavior="altranet" direction="left"
+          >कृपया पुराने किसी भी हेल्प लाइन नंबर पर मैसेज न करे। New whatAap
+          Helpline Number 9876000012
+        </marquee>
+
+        <!-- Add Money -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Money</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <input
+                    type="number"
+                    id="add"
+                    ngModel
+                    name="addFund"
+                    placeholder="Enter Amount"
+                    class="datainput form-control"
+                  />
+                  <button
+                    class="btn btn-success w-100 my-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#paymentModal"
+                  >
+                    Add Fund
+                  </button>
+                </form>
+                <p class="small px-1 py-2 fw-bold">
+                  कम से कम ₹ 200 की धनराशि का भुगतान का भुगतान करे अन्यथा कंपनी
+                  की कोई ज़िम्मेदारी नहीं होगी धनराशि जमा करने का समय 24 Hrs तक
+                  रहेगा। अधिक जानकारी के लिए WhatsApp Helpline Number 9870000078
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR COde -->
+        <div
+          class="modal fade"
+          id="paymentModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="paymentModal">
+                  Scan this QR Code to Add Money to Wallet
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <img
+                  src="../../../assets/QR_code.png"
+                  style="height: 50%; align-items: center"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Withdrawal Money -->
+        <div
+          class="modal fade"
+          id="exampleModal2"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Withdrawal</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <input
+                    type="number"
+                    id="add"
+                    ngModel
+                    name="Withd_ac"
+                    placeholder="Enter Account Number"
+                    class="datainput form-control"
+                  />
+                  <input
+                    type="number"
+                    id="add"
+                    ngModel
+                    name="Withd_ifsc"
+                    placeholder="Enter IFSC Code"
+                    class="datainput form-control"
+                  />
+                  <input
+                    type="number"
+                    id="add"
+                    ngModel
+                    name="Withd_amo"
+                    placeholder="Enter Amount"
+                    class="datainput form-control"
+                  />
+
+                  <button class="btn btn-success w-100 my-2">
+                    Withdrawal Request
+                  </button>
+                </form>
+                <p class="small px-1 pt-3 fw-bold text-success">
+                  सुबह 08:00 बजे से शाम 05:00 बजे तक भुगतान की Request डाल सकते
+                  है। कृपया भुगतान खुलने के समय का का इंतज़ार करे। धन्यवाद
+                </p>
+                <p class="small px-1 py-1 fw-bold">
+                  भुगतान की सेवा चालू कर दी है अभी एक दिन में ही भुगतान की
+                  Request डाले। भुगतान का समय सुबह 9 बजे से दोपहर 4 बजे तक
+                  रहेगा।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

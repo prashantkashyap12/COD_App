@@ -1,0 +1,46 @@
+<div style="height: 81vh">
+  <div
+    class="top-header pb-3 d-flex flex-column justify-content-center align-items-center"
+  >
+    <h1 class="text-white">Forget password</h1>
+    <p class="fw-bold">COD App</p>
+  </div>
+  <form class="main-form p-5">
+    <h3><span class="text-danger">Find</span> your Account -</h3>
+    <p>Please Enter your Email Id to search for your Account.</p>
+    <div class="input-group mb-3">
+      <span class="input-group-text text-danger" id="basic-addon1"
+        ><i class="fa fa-phone" aria-hidden="true"></i
+      ></span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Email Id"
+        name="emailId"
+        [(ngModel)]="emailId"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <button class="btn btn-danger w-100 form-btn" (click)="resetPassword()">
+        Next
+      </button>
+    </div>
+    <div class="d-flex justify-content-between">
+      <a
+        href=""
+        class="d-flex text-danger text-decoration-none justify-content-end"
+        routerLink="/signup"
+        >User Signup ?</a
+      >
+      <br /><br />
+      <a
+        href=""
+        routerLink="/login"
+        class="d-flex text-danger text-decoration-none justify-content-end"
+        >User LogIn ?</a
+      >
+    </div>
+  </form>
+</div>

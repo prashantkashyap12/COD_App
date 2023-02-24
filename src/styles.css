@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: sans-serif;
+}
+.def-heading {
+  color: #120e43;
+  font-weight: 600;
+}
+.def-heading span {
+  color: #bf3312;
+  font-weight: normal;
+}
+.selection-bg {
+  background-color: #ededed;
+}
+.btn-common {
+  background: rgba(131, 58, 180, 1);
+  font-weight: 600;
+  color: azure;
+  transform: scale(1);
+  transition: 0.5s ease;
+}
+.btn-common:hover {
+  transform: scale(1.1);
+  background: rgb(31, 123, 37);
+  box-shadow: 3px 3px 8px gray;
+  color: aliceblue;
+}
+.def-heading2 {
+  color: #ffffff;
+}
+.ng-touched.ng-invalid {
+  border: 1px solid red;
+  box-shadow: 0 0 22px rgb(69, 16, 16);
+}
+.bg-diff-black {
+  background-attachment: sticky;
+  background: url("./assets/black-main.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+.bg-diff-white {
+  background: url("./assets/white-main.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+
+  background-attachment: fixed;
+}
+
+.hover-view {
+  transform: scale(1);
+  transition: 0.5s ease;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.hover-view:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 7px 14px -5px rgba(0, 0, 0, 0.97);
+  cursor: pointer;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

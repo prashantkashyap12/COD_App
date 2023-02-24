@@ -1,0 +1,66 @@
+<div style="height: 82vh">
+  <div
+    class="top-header pb-3 d-flex flex-column justify-content-center align-items-center"
+  >
+    <h1 class="text-white">Login</h1>
+    <p class="fw-bold">COD App</p>
+  </div>
+  <form class="main-form p-5">
+    <h3><span class="text-danger">Welcome </span>Back -</h3>
+    <p>COD is online Gamming Appilication</p>
+    <div class="input-group mb-3">
+      <span class="input-group-text text-danger" id="basic-addon1"
+        ><i class="fa fa-user" aria-hidden="true"></i
+      ></span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Email Id"
+        name="emailId"
+        [(ngModel)]="emailId"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text text-danger" id="basic-addon1"
+        ><i class="fa fa-key" aria-hidden="true"></i
+      ></span>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Enter password"
+        name="password"
+        [(ngModel)]="password"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <button class="btn btn-danger w-100 form-btn" (click)="SignIn()">
+        SIGN IN
+      </button>
+    </div>
+    <div class="form-res">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+        />
+        <label class="form-check-label" for="flexCheckChecked">
+          Remember password
+        </label>
+      </div>
+
+      <br /><br />
+      <a
+        href=""
+        routerLink="/forget"
+        class="d-flex text-danger text-decoration-none justify-content-end"
+        >Forget password?</a
+      >
+    </div>
+  </form>
+</div>
