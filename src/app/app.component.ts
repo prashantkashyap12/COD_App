@@ -19,6 +19,7 @@ export class AppComponent {
     if (!firebase.apps.length) {
       firebase.initializeApp(environment.firebase);
     }
+    console.log(firebase.apps.length, 'length');
   }
 
   ngOninit() {}

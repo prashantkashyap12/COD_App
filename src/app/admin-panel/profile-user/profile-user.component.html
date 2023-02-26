@@ -1,26 +1,41 @@
 <h3 class="text-left fw-bold fs-3 p-3 bg-light">User Profile</h3>
-<div class="bg-white" style="height: 68vh;">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center p-3">
-                <img src="https://i.postimg.cc/RhN07K6p/download.jpg" alt="" class="rounded-circle border border-danger border-3 p-1 w-25">
-            </div>
-            <div class="col-md-12 text-center">
-                <h4 class="fw-bold fs-5 text-secondary">Mr. Jack Willson</h4>
-                <p class="fs-6 text-danger">- Web Developer -</p>
-            </div>
-            <div class="col-md-12 p-4 border-danger border-top ">
-                <p class="text-danger"><b class="text-secondary">Customer Id : </b> 654865080562</p>
-                <p class="text-danger"><b class="text-secondary">E-mail : </b> info@maxwell.com</p>
-                <p class="text-danger"><b class="text-secondary">Contact : </b> +91-000000000</p>
-                <p class="text-danger"><b class="text-secondary">Address : </b> Sector 16 Noida</p>
-                <p class="text-danger"><b class="text-secondary">Payment mode : </b> UPI </p>
-                <p class="text-danger"><b class="text-secondary">Payment info : </b> 89798798797 </p>
-            </div>
-        </div>
+<div class="bg-white" style="height: 68vh">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center p-3">
+        <img
+          src="https://i.postimg.cc/RhN07K6p/download.jpg"
+          alt=""
+          class="rounded-circle border border-danger border-3 p-1 w-25"
+        />
+      </div>
+      <div class="col-md-12 text-center">
+        <h4 class="fw-bold fs-5 text-secondary">{{ name }}</h4>
+        <p class="fs-6 text-danger">{{ post }}</p>
+        <button type="button" class="btn-danger" routerLink="/profile-edit">
+          Edit Profile
+        </button>
+      </div>
+      <div class="col-md-12 p-4 border-danger border-top">
+        <p class="text-danger">
+          <b class="text-secondary">Customer Id : </b> {{ userId }}
+        </p>
+        <p class="text-danger">
+          <b class="text-secondary">E-mail : </b> {{ emailId }}
+        </p>
+        <p class="text-danger">
+          <b class="text-secondary">Contact : </b> {{ phoneNumber }}
+        </p>
+        <p class="text-danger">
+          <b class="text-secondary">Address : </b> {{ address }}
+        </p>
+        <p class="text-danger">
+          <b class="text-secondary">Payment mode : </b> UPI
+        </p>
+        <p class="text-danger">
+          <b class="text-secondary">Payment info : </b> {{ paymentInfo }}
+        </p>
+      </div>
     </div>
-
-</div> 
-    
-
+  </div>
+</div>

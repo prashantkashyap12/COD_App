@@ -11,10 +11,12 @@ import { HelpComponent } from './help/help.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HowPlayComponent } from './how-play/how-play.component';
 import { MyGameComponent } from './my-game/my-game.component';
+import { MyGameSelectComponent } from './my-game-select/my-game-select.component';
 import { MyWalletComponent } from './my-wallet/my-wallet.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { OldResultComponent } from './old-result/old-result.component';
 import { TermCondiComponent } from './term-condi/term-condi.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 const routes: Routes = [
   { path: '', component: AppLoginComponent },
@@ -24,6 +26,7 @@ const routes: Routes = [
   { path: 'forget', component: AppForgetComponent },
   { path: 'login', component: AppLoginComponent },
   { path: 'mygame', component: MyGameComponent },
+  { path: 'game-select', component: MyGameSelectComponent },
   { path: 'commission', component: CommissionComponent },
   { path: 'howtoplay', component: HowPlayComponent },
   { path: 'mywallet', component: MyWalletComponent },
@@ -32,6 +35,7 @@ const routes: Routes = [
   { path: 'mainhome', component: HomepageComponent },
   { path: 'oldresult', component: OldResultComponent },
   { path: 'myterms', component: TermCondiComponent },
+  { path: 'profile-edit', component: ProfileEditComponent },
 ];
 
 @NgModule({

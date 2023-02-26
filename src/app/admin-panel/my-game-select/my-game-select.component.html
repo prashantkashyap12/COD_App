@@ -1,107 +1,184 @@
 <h3 class="text-left fw-bold fs-3 p-3 bg-light">Play Game</h3>
 <div class="bg-white m-2" style="height: 100%">
-
-    <div class="container">
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 1</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 2</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 3</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 4</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 5</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 6</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 7</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 8</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 9</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-
-        <div class="row d-flex align-items-center bg-light my-1 py-2">
-            <div class="col-7">
-                <span class="h5 fw-normal text-danger">Market 10</span><br>
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM - 01:30PM</span>
-            </div>
-            <div class="col-5 ">
-                <button class="btn btn-outline-danger fs-6">PLAY NOW</button>
-            </div>
-        </div>
-       
+  <div class="container">
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 1</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market1')"
+        >
+          PLAY NOW
+        </button>
+      </div>
     </div>
 
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 2</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market2')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 3</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market3')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 4</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market4')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 5</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market5')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 6</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market6')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 7</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market7')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 8</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market8')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 9</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market9')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+
+    <div class="row d-flex align-items-center bg-light my-1 py-2">
+      <div class="col-7">
+        <span class="h5 fw-normal text-danger">Market 10</span><br />
+        <span
+          ><i class="fa fa-clock-o" aria-hidden="true"></i> 06:30AM -
+          01:30PM</span
+        >
+      </div>
+      <div class="col-5">
+        <button
+          class="btn btn-outline-danger fs-6"
+          (click)="selectGame('market10')"
+        >
+          PLAY NOW
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

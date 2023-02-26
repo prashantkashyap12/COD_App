@@ -10,6 +10,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { environment } from '../../environment';
 
@@ -22,6 +23,7 @@ import { environment } from '../../environment';
     FormsModule,
     mobileAppRoutingModule,
     AdminPanelModule,
+    HttpClientModule, 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,

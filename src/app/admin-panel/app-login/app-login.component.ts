@@ -42,7 +42,7 @@ export class AppLoginComponent {
           localStorage.setItem('userId', uid);
           localStorage.setItem('userData', JSON.stringify(currentUser));
         }
-        this.router.navigate(['/mywallet']);
+        this.router.navigate(['/profile-edit']);
       })
       .catch((error) => {
         this.toastr.error(error.message);
