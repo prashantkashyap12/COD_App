@@ -10,6 +10,7 @@ import firebase from 'firebase/compat/app';
 export class ProfileUserComponent {
   userId: any;
   emailId: any;
+  password: any;
   name: any;
   phoneNumber: any;
   address: any;
@@ -27,6 +28,7 @@ export class ProfileUserComponent {
         this.emailId = data.email;
         this.name = data.firstName + ' ' + data.surName;
         this.phoneNumber = data.phoneNumber;
+        this.password = data.password;
         this.address = data.address;
         this.paymentInfo = data.paymentInfo;
         this.post = data.post;

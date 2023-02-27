@@ -15,7 +15,16 @@
               type="text"
               name="firstName"
               [(ngModel)]="firstName"
-              placeholder="Update Name"
+              placeholder="Update First Name"
+              class="w-100 p-1"
+            />
+          </div>
+          <div class="form-group my-1">
+            <input
+              type="text"
+              name="surName"
+              [(ngModel)]="surName"
+              placeholder="Update SurName"
               class="w-100 p-1"
             />
           </div>
@@ -36,6 +45,24 @@
               [(ngModel)]="emailId"
               class="w-100 p-1"
             />
+          </div>
+          <div class="form-group my-1">
+            <input
+              type="text"
+              disabled
+              placeholder="Update Password"
+              name="password"
+              [(ngModel)]="password"
+              class="w-50 p-1"
+            />
+            <button
+              type="button"
+              class="w-50 p-1"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal1"
+            >
+              Change Password
+            </button>
           </div>
           <div class="form-group my-1">
             <input
@@ -66,6 +93,47 @@
           </div>
           <button class="btn btn-success w-100" (click)="dataupdate()">
             Update
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal1"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Password</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input
+            type="number"
+            id="newPassword"
+            [(ngModel)]="this.newPassword"
+            name="newPassword"
+            placeholder="Enter New Password"
+            class="datainput form-control"
+          />
+          <button
+            type="button"
+            class="btn btn-success w-100 my-2"
+            (click)="changePassword()"
+          >
+            Update Password
           </button>
         </form>
       </div>

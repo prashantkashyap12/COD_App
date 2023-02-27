@@ -23,4 +23,10 @@ export class AppComponent {
   }
 
   ngOninit() {}
+
+  ngDoCheck() {
+    if (localStorage.getItem('userId')) {
+      this.showHeader = true;
+    }
+  }
 }

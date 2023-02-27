@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
@@ -11,17 +12,22 @@ import { Router } from '@angular/router';
 })
 export class ProfileEditComponent {
   userId: any;
+  password: any;
+  newPassword: any;
   firstName: any = ' ';
   surName: any = ' ';
   emailId: any = '';
-  address: any;
+  address: any = '';
   walletAmount: number = 0;
-  paymentInfo: any;
-  phoneNumber: any;
-  post: any;
+  paymentInfo: any = '';
+  phoneNumber: any = '';
+  post: any = '';
+
+  @ViewChild('closebutton') closebutton: any;
 
   constructor(
     private db: AngularFireDatabase,
+    private af: AngularFireAuth,
     private toastr: ToastrService,
     private router: Router
   ) {
@@ -36,23 +42,34 @@ export class ProfileEditComponent {
     firebase
       .database()
       .ref('users/' + this.userId)
-      .once('value', (snap) => {
-        let data = snap.val();
-        console.log(data, 'snapValue');
-        this.emailId = data.email;
-        this.firstName = data.firstName;
-        this.surName = data.surName;
-        this.phoneNumber = data.phoneNumber;
-        this.address = data.address;
-        this.paymentInfo = data.paymentInfo;
-      });
+      .once(
+        'value',
+        (snap) => {
+          let data = snap.val();
+          this.emailId = data.email;
+          this.firstName = data.firstName;
+          this.surName = data.surName;
+          this.phoneNumber = data.phoneNumber;
+          this.address = data.address;
+          this.password = data.password;
+          this.paymentInfo = data.paymentInfo;
+          this.post = data.post;
+        },
+        (error) => {
+          if (error) {
+            this.toastr.error('Email id not found, Please try to signin again');
+            localStorage.clear();
+            this.router.navigate(['/login']);
+          }
+        }
+      );
   }
 
   dataupdate() {
     firebase
       .database()
       .ref('users/' + this.userId)
-      .set(
+      .update(
         {
           uid: this.userId,
           firstName: this.firstName,
@@ -73,5 +90,29 @@ export class ProfileEditComponent {
           }
         }
       );
+  }
+
+  changePassword() {
+    const cpUser = firebase.auth().currentUser;
+    cpUser!
+      .updatePassword(this.newPassword)
+      .then((res) => {
+        this.saveNewPassword();
+        this.toastr.success('Password changed Successfully');
+        this.getUser();
+        // this.closebutton.nativeElement.click();
+      })
+      .catch(function (error) {
+        console.log(error, 'ERRR');
+      });
+  }
+
+  saveNewPassword() {
+    firebase
+      .database()
+      .ref('users/' + this.userId)
+      .update({
+        password: this.newPassword,
+      });
   }
 }
